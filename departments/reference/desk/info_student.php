@@ -1,6 +1,6 @@
   <div class="split l30-r70 cf">
     <div class="left center">
-    <img src="/departments/reference/desk/img/student-staff.png" alt="graphic" />
+    <img src="/img/student-staff.png" alt="graphic" />
     </div>
 
     <div class="right center">

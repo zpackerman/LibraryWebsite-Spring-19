@@ -2,7 +2,7 @@
   <div class="split l50-r50 cf">
     <div class="left center">
       <h5 class="no-margin-top center">Currently staffed by</h5>
-      <img src="/departments/reference/desk/img/student-staff.png" alt="graphic" />
+      <img src="/img/student-staff.png" alt="graphic" />
       <h2 class="no-margin-top center">Informatics Student</h2>
       <p><em>815-939-5355</em></p>
       <p>
@@ -15,8 +15,8 @@
       <h5 class="no-margin-top center">On Call<br />
       Reference Staff</h5>
 			<?php if (file_exists('./img/staff/'.$username.'.jpg')){
-							echo "<img style=position:absolute src=/departments/reference/desk/img/staff/$username.jpg alt=graphic />";
-							echo "<img style=position:relative src=/departments/reference/desk/img/on-call-frame.png />";
+							echo "<img style=position:absolute src=/img/staff/$username.jpg alt=graphic />";
+							echo "<img style=position:relative src=/img/on-call-frame.png />";
 						} else {
 							echo "<img src=/img/staff/photo_filler.jpg />";
 						}  ?>

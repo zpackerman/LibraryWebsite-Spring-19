@@ -2,8 +2,8 @@
 <div class="split l30-r70 cf">
   <div class="left center">
       <?php if (file_exists('./img/staff/'.$username.'.jpg')){
-							echo "<img style=position:absolute src=/departments/reference/desk/img/staff/$username.jpg alt=graphic />";
-							echo "<img style=position:relative src=/departments/reference/desk/img/at-desk-frame.png />";
+							echo "<img style=position:absolute src=/img/staff/$username.jpg alt=graphic />";
+							echo "<img style=position:relative src=/img/at-desk-frame.png />";
 						} else {
 							echo "<img src=/img/staff/photo_filler.jpg />";
 						}  ?>

@@ -1,7 +1,7 @@
   <div class="split l30-r70 cf padding30">
     <div class="left center">
       <a href="/forms/email/index.php?id=009">
-        <img src="/departments/reference/desk/img/email-librarian.png" alt="graphic" />
+        <img src="/img/email-librarian.png" alt="graphic" />
       </a>
     </div>
 
