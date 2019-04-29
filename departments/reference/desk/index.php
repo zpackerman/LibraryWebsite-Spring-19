@@ -25,16 +25,12 @@
 
   $infoStudentPresent = false;
 
-  if(strpos(get_headers($host.$locationQuery)[0], '200')){
-  	  //decode json file into an associative array
-	$locationJSON = file_get_contents($host . $locationQuery); //get by location
-	$locationRefDesk = json_decode($locationJSON, true);
-  }
+    //decode json file into an associative array
+	  $locationJSON = file_get_contents($host . $locationQuery); //get by location
+	  $locationRefDesk = json_decode($locationJSON, true);
 
-  if(strpos(get_headers($host.$coveringQuery)[0], '200')){
-	$coveringJSON = file_get_contents($host . $coveringQuery); //get by covering
-	$coveringRefDesk = json_decode($coveringJSON, true);
-  }
+	  $coveringJSON = file_get_contents($host . $coveringQuery); //get by covering
+	  $coveringRefDesk = json_decode($coveringJSON, true);
 
 	//call data from get-by-location and assign it to variables
 
@@ -47,7 +43,7 @@
         $location = $item['location'];
         $department = $item['department'];
         $covering = $item['covering'];
-    	$userID = $item['userID'];
+    	  $userID = $item['userID'];
       }
     }
 	}
@@ -57,8 +53,7 @@
  		$department = $coveringRefDesk['status'][0]['department'];
  		$covering = $coveringRefDesk['status'][0]['covering'];
  		$userID = $coveringRefDesk['status'][0]['userID'];
-	}
-	elseif (!isset($department)) {
+	} elseif (!isset($department)) {
 		$location = null;
 		$department = null;
 		$covering = null;
@@ -101,22 +96,22 @@
 
   switch ($refDeskState) {
     case 'staffed':
-      include_once('./1staffed.php');
+      include_once('./staffed.php');
       break;
     case 'info_on_call':
-      include_once('./2info_on_call.php');
+      include_once('./info_on_call.php');
       break;
     case 'info_student':
-      include_once('./3info_student.php');
+      include_once('./info_student.php');
       break;
     case 'on_call':
-      include_once('./4on_call.php');
+      include_once('./on_call.php');
       break;
     case 'no_staff':
-      include_once('./5no_staff.php');
+      include_once('./no_staff.php');
       break;
     default:
-      include_once('./5no_staff.php');
+      include_once('./no_staff.php');
       break;
   }
 
